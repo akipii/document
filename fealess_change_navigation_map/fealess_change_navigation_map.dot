@@ -1,0 +1,93 @@
+// Gvizの目次 - Rubyの世界からGraphvizの世界にこんにちは！
+// http://melborne.github.io/2014/02/27/gviz-posts/
+
+// dot -Tpng fealess_change_navigation_map.dot -o fealess_change_navigation_map.png
+
+// ◆全体に関わるパターン
+// 
+// Evangelist  :エバンジェリスト(1)
+// SmallSuccesses  :小さな成功(2)
+// StepbyStep  :ステップバイステップ(3)
+// TesttheWaters  :予備調査(4)
+// TimeforReflection  :ふりかえりの時間(5)
+// 
+// ◆序盤の活動に関わるパターン
+// 
+// AskforHelp  :協力を求める(6)
+// BrownBag  :ブラウンバッグ・ミーティング(7)
+// Connector  :コネクター(8)
+// DoFood  :何か食べながら(9)
+// e-Forum  :電子フォーラム(10)
+// EarlyAdopter  :アーリーアダプター(11)
+// ExternalValidation  :外部のお墨付き(12)
+// GroupIdentity  :グループのアイデンティティ(13)
+// GuruonYourSide  :達人を味方に(14)
+// InYourSpace  :空間を演出する(15)
+// Innovator  :イノベーター(16)
+// JustDoIt  :やってみる(17)
+// JustSayThanks  :感謝を伝える(18)
+// NextSteps  :次のアクション(19)
+// PersonalTouch  :個人的な接触(20)
+// Piggyback  :便乗(21)
+// PlanttheSeeds  :種をまく(22)
+// TheRightTime  :適切な時期(23)
+// StayinTouch  :定期的な連絡(24)
+// StudyGroup  :勉強会(25)
+// TailorMade  :テイラーメイド(26)
+// BigJolt  :著名人を招く(27)
+// 
+// ◆中盤以降の活動に関わるパターン
+// 
+// CorporateAngel  :経営層の支持者(28)
+// DedicatedChampion  :正式な推進担当者(29)
+// EarlyMajority  :アーリーマジョリティ(30)
+// GuruReview  :達人のレビュー(31)
+// HometownStory  :体験談の共有(32)
+// InvolveEveryone  :みんなを巻き込む(33)
+// JustEnough  :ちょうど十分(34)
+// LocalSponsor  :身近な支援者(35)
+// Location,Location,Location  :場所重要(36)
+// Mentor  :メンター(37)
+// RoyalAudience  :謁見(38)
+// ShouldertoCryOn  :相談できる同志(39)
+// SmellofSuccess  :成功の匂い(40)
+// SustainedMomentum  :勢いの持続(41)
+// Token  :トークン(42)
+// 
+// ◆抵抗と付き合うためのパターン
+// 
+// Bridge-Builder  :橋渡し役(43)
+// ChampionSkeptic  :懐疑派代表(44)
+// CorridorPolitics  :根回し(45)
+// FearLess  :怖れは無用(46)
+// TrialRun  :お試し期間(47)
+// WhisperintheGeneral’sEar  :将軍の耳元でささやく(48)
+
+digraph G {
+  rankdir=LR; // 左から右へ
+
+  Evangelist -> JustDoIt;
+  Evangelist -> TimeforReflection;
+  Evangelist -> SmallSuccesses;
+  Evangelist -> TesttheWaters;
+ 
+  SmallSuccesses -> StepbyStep;
+  SmallSuccesses -> TimeforReflection;
+ 
+  StepbyStep -> TrialRun;
+  StepbyStep -> ShouldertoCryOn;
+
+  TimeforReflection -> StepbyStep;
+  TesttheWaters -> StepbyStep;
+
+  TesttheWaters -> GuruonYourSide;
+  TesttheWaters -> Innovator;
+  TesttheWaters -> PersonalTouch;
+  TesttheWaters -> JustDoIt;
+  TesttheWaters -> HometownStory;
+  TesttheWaters -> BrownBag;
+
+  TesttheWaters -> TheRightTime;
+  TesttheWaters -> StudyGroup;
+  TesttheWaters -> BigJolt;
+}
